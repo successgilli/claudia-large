@@ -10,7 +10,7 @@ async function getMetaInfoFromS3(key, bucket) {
 }
 
 exports.handler = async function (_, context) {
-  const metaInfo = await getMetaInfoFromS3("largefile1.txt", "fin-api-gs1");
+  const metaInfo = await getMetaInfoFromS3("largefile1.txt", "claudia-large");
 
   context.succeed(`file size is: ${metaInfo.ContentLength}`);
 };
